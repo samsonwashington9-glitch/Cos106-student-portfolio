@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive academic task planner.">
+  <title>Academic Planner | Washington Samson</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/planner.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">WS</span><span>Washington Samson</span></a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a class="active" href="planner.html">Academic Planner</a><a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container"><p class="eyebrow">PLAN WITH PURPOSE</p><h1>Academic planner</h1><p class="lead">Keep track of assignments, study sessions and important deadlines.</p></div>
+    </section>
+
+    <section class="section container planner-layout">
+      <div class="planner-panel">
+        <h2>Add a task</h2>
+        <form id="task-form" class="task-form">
+          <label for="task-input">Task description</label>
+          <input id="task-input" name="task" type="text" maxlength="120" placeholder="e.g. Revise HTML forms" required>
+          <div class="form-row">
+            <div><label for="task-date">Due date</label><input id="task-date" name="date" type="date"></div>
+            <div><label for="task-category">Category</label>
+              <select id="task-category" name="category">
+                <option>Assignment</option><option>Study</option><option>Exam</option><option>Personal</option>
+              </select>
+            </div>
+          </div>
+          <button class="button button-primary" type="submit">＋ Add task</button>
+          <p id="task-feedback" class="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="planner-panel">
+        <div class="planner-heading"><div><h2>My tasks</h2><p class="muted">Your tasks are saved in this browser.</p></div><span class="task-count" id="task-count">0 tasks</span></div>
+        <div class="task-filters" aria-label="Filter tasks">
+          <button class="filter-button active" data-filter="all" type="button">All</button>
+          <button class="filter-button" data-filter="active" type="button">Pending</button>
+          <button class="filter-button" data-filter="completed" type="button">Completed</button>
+        </div>
+        <ul id="task-list" class="task-list" aria-live="polite"></ul>
+        <p id="empty-state" class="empty-state">No tasks yet. Add your first academic task.</p>
+        <div class="planner-summary"><span id="remaining-count">0 pending</span><span id="completed-count">0 completed</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-wrap"><p>© <span class="current-year"></span> Washington Samson. COS 106 Term Project.</p><a href="contact.html">Get in touch</a></div></footer>
+</body>
+</html>
