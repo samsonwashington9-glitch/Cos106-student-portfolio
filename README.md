@@ -1,4 +1,4 @@
-# COS 106 Student Portfolio and Academic Management Website
+# CSC 106 Student Portfolio and Academic Management Website
 
 A five-page responsive website built with HTML5, CSS3 and vanilla JavaScript for the MIVA Open University COS 106 term project.
 
